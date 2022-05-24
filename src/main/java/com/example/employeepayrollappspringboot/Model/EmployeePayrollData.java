@@ -2,6 +2,9 @@ package com.example.employeepayrollappspringboot.Model;
 
 import com.example.employeepayrollappspringboot.DTO.EmployeePayrollDTO;
 
+
+
+
 public class EmployeePayrollData {
     private int employeeID;
     private String name;

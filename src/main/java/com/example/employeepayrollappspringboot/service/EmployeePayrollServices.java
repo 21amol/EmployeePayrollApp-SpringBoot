@@ -34,6 +34,7 @@ public class EmployeePayrollServices {
     EmployeePayrollData employeePayrollData = this.getEmployeePayrollDataById(empID);
     employeePayrollData.setName(employeePayrollDTO.name);
     employeePayrollData.setSalary(employeePayrollDTO.salary);
+
     employeeDataList.set(empID-1, employeePayrollData);
     return employeePayrollData;
   }

@@ -1,6 +1,11 @@
 package com.example.employeepayrollappspringboot.DTO;
 
+
+
+
+
 public class ResponseDTO {
+
 
     private String message;
     private Object data;
