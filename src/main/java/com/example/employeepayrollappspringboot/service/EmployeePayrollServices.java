@@ -2,6 +2,7 @@ package com.example.employeepayrollappspringboot.service;
 
 import com.example.employeepayrollappspringboot.DTO.EmployeePayrollDTO;
 import com.example.employeepayrollappspringboot.Model.EmployeePayrollData;
+import com.example.employeepayrollappspringboot.exceptions.EmployeePayrollException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -20,7 +21,8 @@ public class EmployeePayrollServices {
   public EmployeePayrollData getEmployeePayrollDataById(int empID) {
 //    EmployeePayrollData employeePayrollData;
 //    employeePayrollData = new EmployeePayrollData(empID, new EmployeePayrollDTO("Amol", 5000));
-    return employeeDataList.get(empID-1);
+    return employeeDataList.stream().filter(employeePayrollData -> employeePayrollData.getEmployeeID() == empID)
+            .findFirst().orElseThrow(() -> new EmployeePayrollException("Employee Id not Found!!!"));
   }
 
   public EmployeePayrollData addEmployeePayrollData(EmployeePayrollDTO employeePayrollDTO) {
