@@ -18,3 +18,17 @@
 2022-2022-05 11:35 [WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
 2022-2022-05 11:35 [INFO][restartedMain][c.e.e.EmployeePayrollAppSpringBootApplication:61] Started EmployeePayrollAppSpringBootApplication in 4.211 seconds (JVM running for 5.298)
 2022-2022-05 11:35 [INFO][restartedMain][c.e.e.EmployeePayrollAppSpringBootApplication:13] Employee Payroll Application Started!!!
+2022-2022-05 11:54 [INFO][restartedMain][c.e.e.EmployeePayrollAppSpringBootApplication:55] Starting EmployeePayrollAppSpringBootApplication using Java 17.0.1 on DESKTOP-6V1G0JA with PID 10316 (C:\Users\Admin\IdeaProjects\EmployeePayrollApp-SpringBoot\target\classes started by Admin in C:\Users\Admin\IdeaProjects\EmployeePayrollApp-SpringBoot)
+2022-2022-05 11:54 [DEBUG][restartedMain][c.e.e.EmployeePayrollAppSpringBootApplication:56] Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-2022-05 11:54 [INFO][restartedMain][c.e.e.EmployeePayrollAppSpringBootApplication:640] The following 1 profile is active: "dev"
+2022-2022-05 11:54 [WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-2022-05 11:54 [WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-2022-05 11:54 [INFO][restartedMain][c.e.e.EmployeePayrollAppSpringBootApplication:61] Started EmployeePayrollAppSpringBootApplication in 4.513 seconds (JVM running for 5.882)
+2022-2022-05 11:54 [INFO][restartedMain][c.e.e.EmployeePayrollAppSpringBootApplication:13] Employee Payroll Application Started!!!
+2022-2022-05 11:58 [INFO][restartedMain][c.e.e.EmployeePayrollAppSpringBootApplication:55] Starting EmployeePayrollAppSpringBootApplication using Java 17.0.1 on DESKTOP-6V1G0JA with PID 10836 (C:\Users\Admin\IdeaProjects\EmployeePayrollApp-SpringBoot\target\classes started by Admin in C:\Users\Admin\IdeaProjects\EmployeePayrollApp-SpringBoot)
+2022-2022-05 11:58 [DEBUG][restartedMain][c.e.e.EmployeePayrollAppSpringBootApplication:56] Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-2022-05 11:58 [INFO][restartedMain][c.e.e.EmployeePayrollAppSpringBootApplication:640] The following 1 profile is active: "dev"
+2022-2022-05 11:58 [WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-2022-05 11:58 [WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-2022-05 11:58 [INFO][restartedMain][c.e.e.EmployeePayrollAppSpringBootApplication:61] Started EmployeePayrollAppSpringBootApplication in 5.221 seconds (JVM running for 6.474)
+2022-2022-05 11:58 [INFO][restartedMain][c.e.e.EmployeePayrollAppSpringBootApplication:14] Employee Payroll Application Started in DEV Environment
