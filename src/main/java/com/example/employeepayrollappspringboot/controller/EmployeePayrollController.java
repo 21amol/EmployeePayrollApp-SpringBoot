@@ -4,6 +4,7 @@ import com.example.employeepayrollappspringboot.DTO.EmployeePayrollDTO;
 import com.example.employeepayrollappspringboot.DTO.ResponseDTO;
 import com.example.employeepayrollappspringboot.Model.EmployeePayrollData;
 import com.example.employeepayrollappspringboot.service.EmployeePayrollServices;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-
+@Slf4j
 @RestController
 @RequestMapping("/employeepayroll")
 public class EmployeePayrollController {
@@ -43,7 +44,8 @@ public class EmployeePayrollController {
     }
 
     @PutMapping(value = {" ", "/edit/{empID}"})
-    public ResponseEntity<ResponseDTO> updateEmployeePayrollData(@Valid @PathVariable int empID,
+    public ResponseEntity<ResponseDTO> updateEmployeePayrollData(@Valid
+                                                                     @PathVariable int empID,
                                                                  @RequestBody EmployeePayrollDTO employeePayrollDTO) {
         EmployeePayrollData employeePayrollData;
         employeePayrollData = employeePayrollServices.updateEmployeeData(empID, employeePayrollDTO);
