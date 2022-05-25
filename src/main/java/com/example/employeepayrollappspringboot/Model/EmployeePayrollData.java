@@ -44,7 +44,17 @@ public class EmployeePayrollData {
         this.department = employeePayrollDTO.department;
     }
 
-       // No need to write setters and getters as we have added @Data annotation.
+    public void updateData(EmployeePayrollDTO employeePayrollDTO) {
+        this.name = employeePayrollDTO.name;
+        this.salary = employeePayrollDTO.salary;
+        this.gender = employeePayrollDTO.gender;
+        this.note = employeePayrollDTO.note;
+        this.joiningDate = employeePayrollDTO.joiningDate;
+        this.profilePic = employeePayrollDTO.profilePic;
+        this.department = employeePayrollDTO.department;
+    }
+
+    // No need to write setters and getters as we have added @Data annotation.
 
 //    public int getEmployeeID() {
 //        return employeeID;
