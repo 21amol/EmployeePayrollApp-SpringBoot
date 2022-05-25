@@ -19,7 +19,7 @@ import java.util.List;
 public class EmployeePayrollController {
 
   @Autowired
-  EmployeePayrollServices employeePayrollServices;
+  public EmployeePayrollServices employeePayrollServices;
 
   @RequestMapping(value = {" ", "/get"})
   public ResponseEntity<ResponseDTO> getEmployeePayrollData() {
@@ -61,8 +61,12 @@ public class EmployeePayrollController {
     return new ResponseEntity<>(responseDTO, HttpStatus.OK);
   }
 
-
-
+  @GetMapping("/dept/{department}")
+  public ResponseEntity<ResponseDTO> getEmployeePayrollDeptData(@PathVariable String department) {
+    List<EmployeePayrollData> empDataList = employeePayrollServices.getEmployeeByDepartment(department);
+    ResponseDTO responseDTO = new ResponseDTO("Success cal for Departments!!!", empDataList);
+    return new ResponseEntity<>(responseDTO, HttpStatus.OK);
+  }
 }
 
 

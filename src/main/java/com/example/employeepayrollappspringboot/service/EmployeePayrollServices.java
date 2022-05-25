@@ -43,6 +43,8 @@ public class EmployeePayrollServices {
     employeePayrollRepo.delete(employeePayrollData);
   }
 
-
+  public List<EmployeePayrollData> getEmployeeByDepartment(String department) {
+    return employeePayrollRepo.findEmployeeByDepartment(department);
+  }
 
 }
