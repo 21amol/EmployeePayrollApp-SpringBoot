@@ -3,8 +3,8 @@ package com.example.employeepayrollappspringboot.DTO;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.ToString;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.Pattern;
+import javax.validation.constraints.*;
+import java.time.LocalDate;
 import java.util.List;
 
 @ToString
@@ -15,15 +15,20 @@ public class EmployeePayrollDTO {
   @Min(value = 500, message = "Salary should be more than 500")
   public int salary;
 
+  @Pattern(regexp = "Male|Female", message = "Gender should be Male or Female")
   public String gender;
 
- // @JsonFormat(pattern = "dd MMM yyyy")        // @JsonFormat is used when, LocalDate as a Data Type is used.
-  public String joiningDate;
+  @JsonFormat(pattern = "dd MMM yyyy")        // @JsonFormat is used when, LocalDate as a Data Type is used.
+  @NotNull(message = "Joining Date cannot be Empty")
+  @PastOrPresent(message = "Date Should be past or present date")    // Can be used only if you are using LocalDate.
+  public LocalDate joiningDate;
 
+  @NotEmpty(message = "Note cannot be Empty")
   public String note;
 
   public String profilePic;
 
+  @NotNull(message = "Department cannot be Null")
   public List<String> department;
 
 

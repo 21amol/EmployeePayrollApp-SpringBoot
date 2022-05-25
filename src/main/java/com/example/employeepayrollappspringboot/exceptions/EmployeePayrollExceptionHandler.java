@@ -3,6 +3,7 @@ package com.example.employeepayrollappspringboot.exceptions;
 import com.example.employeepayrollappspringboot.DTO.ResponseDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -24,8 +25,15 @@ public class EmployeePayrollExceptionHandler {
   }
 
   @ExceptionHandler(EmployeePayrollException.class)
-  public ResponseEntity<ResponseDTO> handleMethodArgumentNotValidException(EmployeePayrollException exception){
+  public ResponseEntity<ResponseDTO> handleEmployeePayrollException(EmployeePayrollException exception){
     ResponseDTO responseDTO = new ResponseDTO("Exception while processing REST request",exception.getMessage());
+    return new ResponseEntity<>(responseDTO, HttpStatus.BAD_REQUEST);
+  }
+
+  @ExceptionHandler(HttpMessageNotReadableException.class)
+  public ResponseEntity<ResponseDTO>handleHttpMessageNotReadableException(HttpMessageNotReadableException exception){
+    ResponseDTO responseDTO = new ResponseDTO("Date should be in the format of dd MM yyyy",
+            "Enter valid date");
     return new ResponseEntity<>(responseDTO, HttpStatus.BAD_REQUEST);
   }
 

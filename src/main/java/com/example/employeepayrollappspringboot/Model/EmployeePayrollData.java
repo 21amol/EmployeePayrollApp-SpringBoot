@@ -3,6 +3,7 @@ package com.example.employeepayrollappspringboot.Model;
 import com.example.employeepayrollappspringboot.DTO.EmployeePayrollDTO;
 import lombok.Data;
 
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -12,7 +13,7 @@ public class EmployeePayrollData {
     private String name;
     private int salary;
     private String gender;
-    private String joiningDate;
+    private LocalDate joiningDate;
     private String note;
     private String profilePic;
     private List<String> department;
